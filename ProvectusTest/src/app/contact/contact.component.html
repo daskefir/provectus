@@ -1,0 +1,45 @@
+<div class="form-group">
+    <label>Имя</label>
+    <input class="form-control" name="username" [(ngModel)]="contct.name" />
+</div>
+<div class="form-group">
+    <label>Возраст</label>
+    <input class="form-control" type="number" name="age" [(ngModel)]="contact.email" />
+</div>
+<div class="form-group">
+    <button class="btn btn-default" (click)="submit(contact)">Отправить</button>
+</div>
+<div *ngIf="done">
+    <div>Получено от сервера:</div>
+    <div>Имя: {{receivedUser.name}}</div>
+    <div>Возраст: {{receivedUser.email}}</div>
+</div>
+
+<!-- <form [formGroup]="myReactiveForm" (submit)="onSubmit()">
+    <div class="registrForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" formControlName="name" />
+        <div class="error" *ngIf="isControlInvalid('name')">
+            Имя должно состоять только из русских букв
+        </div>
+        <br/><br/>
+
+        <label for="email" formControlName="email">E-mail</label>
+        <input type="text" id="email" formControlName="email" />
+        <div class="error" *ngIf="isControlInvalid('email')">
+            Введите коректный E-mail
+        </div>
+
+        <br/><br/>
+
+        <label for="password" formControlName="password">Comment</label>
+        <textarea id="comment" formControlName="comment"></textarea>
+
+        <div class="error" *ngIf="isControlInvalid('password')">
+            Пароль должен содержать от 6-ти до 12 символов
+        </div>
+
+        <br/><br/>
+        <button type="submit"> Отправить </button>
+    </div>
+</form> -->
